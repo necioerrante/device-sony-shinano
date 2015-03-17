@@ -200,3 +200,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
 
+# Bootimg tools
+PRODUCT_PACKAGES += \
+    extract_elf_ramdisk
