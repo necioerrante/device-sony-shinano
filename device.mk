@@ -73,6 +73,14 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/keylayout/mhl-rcp.kl:system/usr/keylayout/mhl-rcp.kl \
     $(SONY_ROOT)/system/usr/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl:system/usr/keylayout/msm8974-taiko-mtp-snd-card_Button_Jack.kl
 
+#Bootimg tools
+PRODUCT_PACKAGES += \
+    extract_elf_ramdisk
+
+#Recovery keycheck
+PRODUCT_PACKAGES += \
+    keycheck
+
 #Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
