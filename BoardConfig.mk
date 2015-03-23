@@ -101,3 +101,6 @@ WITH_DEXPREOPT := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/sony/shinano/rootdir/fstab.shinano
+
+# TWRP flags
+DEVICE_RESOLUTION := 720x1280
