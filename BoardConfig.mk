@@ -94,6 +94,9 @@ EXTENDED_FONT_FOOTPRINT := true
 # Enable dex-preoptimization to speed up first boot sequence
 WITH_DEXPREOPT := true
 
+BUILD_KERNEL := true
+-include vendor/sony/kernel/KernelConfig.mk
+
 # Recovery
 TARGET_RECOVERY_FSTAB := device/sony/shinano/rootdir/fstab.shinano
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
