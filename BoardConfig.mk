@@ -20,7 +20,6 @@ TARGET_BOARD_PLATFORM := msm8974
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
-TARGET_CPU_SMP := true
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_NO_RADIOIMAGE := true
@@ -47,14 +46,19 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2671771648
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
+# Recovery
+TARGET_RECOVERY_FSTAB := device/sony/shinano/rootdir/fstab.shinano
+
 USE_OPENGL_RENDERER := true
-TARGET_USES_C2D_COMPOSITION := true
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 BOARD_EGL_CFG := device/sony/shinano/rootdir/system/lib/egl/egl.cfg
 
+# Audio
 BOARD_USES_ALSA_AUDIO := true
+AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 
 TARGET_USES_ION := true
 USE_DEVICE_SPECIFIC_CAMERA := true
@@ -76,6 +80,7 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUEDROID_VENDOR_CONF := device/sony/shinano/bluetooth/vnd_generic.txt
 
+
 # GPS definitions for Qualcomm solution
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 TARGET_NO_RPC := true
@@ -96,10 +101,6 @@ WITH_DEXPREOPT := true
 
 BUILD_KERNEL := true
 -include vendor/sony/kernel/KernelConfig.mk
-
-# Recovery
-TARGET_RECOVERY_FSTAB := device/sony/shinano/rootdir/fstab.shinano
-TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 
 # TWRP flags
 TW_THEME := portrait_hdpi
