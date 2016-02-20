@@ -13,7 +13,7 @@
 # limitations under the License.
 
 $(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
-$(call inherit-product, device/sony/common/common.mk)
+$(call inherit-product, device/sony/common/common_du.mk)
 
 SOMC_PLATFORM := shinano
 

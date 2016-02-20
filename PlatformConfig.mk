@@ -62,4 +62,4 @@ BOARD_SEPOLICY_DIRS += device/sony/shinano/sepolicy
 
 BOARD_SEPOLICY_UNION += \
 
-include device/sony/common/CommonConfig.mk
+include device/sony/common/CommonConfigDU.mk
